@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    internal class PrintService
+    internal class PrintService<T>
     {
         //Variavel interna que poderá armazenar 10 numeros inteiros
-        private int[] _values = new int[10];
+        private T[] _values = new T[10];
         //Variavel pra contar quantos inteiros
         private int _count = 0;
 
 
-        public void AddValue(int value)
+        public void AddValue(T value)
         {
             if (_count == 10)
             {
@@ -26,7 +26,7 @@ namespace Generics
         }
 
 
-        public int Firt()
+        public T Firt()
         {
             if (_count == 0)
             {

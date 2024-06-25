@@ -11,7 +11,7 @@ namespace Generics
         static void Main(string[] args)
         {
             //Declarando classe
-            PrintService printService = new PrintService();
+            PrintService<int> printService = new PrintService<int>();
 
 
             Console.Write("How many values? ");
@@ -22,6 +22,11 @@ namespace Generics
                 int x = int.Parse(Console.ReadLine());
                 printService.AddValue(x);
             }
+
+            int a = printService.Firt();
+            int b = a + 2;
+            Console.WriteLine(b);
+
             // Imprimir todos elementos
             printService.Print();
 
